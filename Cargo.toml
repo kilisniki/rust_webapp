@@ -1,0 +1,13 @@
+[package]
+name = "rest_counter"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "rest_counter"
+path = "src/main.rs"
+
+[dependencies]
+actix-web = "4"
+sqlx = { version = "0.6", features = ["postgres", "runtime-actix-native-tls", "macros"] }
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
